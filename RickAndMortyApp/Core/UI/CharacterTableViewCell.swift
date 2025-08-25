@@ -51,6 +51,7 @@ final class CharacterTableViewCell: UITableViewCell {
     override init(style: UITableViewCell.CellStyle, reuseIdentifier: String?) {
         super.init(style: style, reuseIdentifier: reuseIdentifier)
         accessoryType = .disclosureIndicator
+        setupUI()
     }
     
     required init?(coder: NSCoder) {
@@ -78,6 +79,7 @@ final class CharacterTableViewCell: UITableViewCell {
     
     private func setupUI() {
         let avatarSize: CGFloat = 64
+        
         addSubview(mainStackView)
         mainStackView.addArrangedSubview(avatarImageView)
         mainStackView.addArrangedSubview(labelsStackView)

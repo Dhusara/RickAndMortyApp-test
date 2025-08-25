@@ -61,10 +61,10 @@ final class APIService {
     }
 
     public func fetchCharacters(page: Int) async throws -> Response<CharacterModel>? {
-        try await get(Endpoints.characters.rawValue)
+        try await get(Endpoints.character.rawValue)
     }
     
     public func fetchCharacter(id: Int) async throws -> CharacterModel? {
-        try await get(Endpoints.characters.rawValue + "/\(id)")
+        try await get(Endpoints.character.rawValue + "/\(id)")
     }
 }
