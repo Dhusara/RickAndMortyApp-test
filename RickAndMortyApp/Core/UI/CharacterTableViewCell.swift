@@ -45,6 +45,7 @@ final class CharacterTableViewCell: UITableViewCell {
         $0.translatesAutoresizingMaskIntoConstraints = false
         $0.textColor = .secondaryLabel
         $0.font = .systemFont(ofSize: 12)
+        $0.numberOfLines = .zero
         return $0
     }(UILabel())
 
