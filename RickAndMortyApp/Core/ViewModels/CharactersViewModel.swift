@@ -37,15 +37,6 @@ final class CharactersViewModel {
         return dataSource[index]
     }
     
-    public func willDisplayCell(at index: Int) {
-        guard hasMore, !isLoading, index >= dataSource.count - 5 else { return }
-        
-        page += 1
-        Task {
-            await load(page: page, reset: false)
-        }
-    }
-    
     // MARK: Loading
     
     private func loadInitial() async {

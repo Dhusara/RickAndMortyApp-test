@@ -79,7 +79,7 @@ extension CharactersListViewController: UITableViewDataSource, UITableViewDelega
     func tableView(_ tableView: UITableView, numberOfRowsInSection section: Int) -> Int {
         viewModel.numberOfItems()
     }
-
+    
     func tableView(_ tableView: UITableView,
                    cellForRowAt indexPath: IndexPath) -> UITableViewCell {
         guard let model = viewModel.item(at: indexPath.row) else { return UITableViewCell() }
@@ -88,13 +88,7 @@ extension CharactersListViewController: UITableViewDataSource, UITableViewDelega
         cell.configure(with: model)
         return cell
     }
-
-    func tableView(_ tableView: UITableView,
-                   willDisplay cell: UITableViewCell,
-                   forRowAt indexPath: IndexPath) {
-        viewModel.willDisplayCell(at: indexPath.row)
-    }
-
+    
     func tableView(_ tableView: UITableView, didSelectRowAt indexPath: IndexPath) {
         guard let model = viewModel.item(at: indexPath.row) else { return }
         
